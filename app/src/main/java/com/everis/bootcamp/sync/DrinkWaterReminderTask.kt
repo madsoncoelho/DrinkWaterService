@@ -1,8 +1,24 @@
 package com.everis.bootcamp.sync
 
+import android.content.Context
+import com.everis.bootcamp.utils.PreferencesUtils
+
 
 class DrinkWaterReminderTask {
     //TODO: 001 - Criar uma String constante estatica chamada ACTION_INCREMENT_WATER_COUNT para representar a ação de incrementar o contador
+    companion object {
+        const val ACTION_INCREMENT_WATER_COUNT = "ACTION_INCREMENT_WATER_COUNT"
+
+        private fun incrementWaterCount(context: Context) {
+            PreferencesUtils.incrementWaterCount(context)
+        }
+
+        fun executeTask(context: Context, action: String?) {
+            if (action == ACTION_INCREMENT_WATER_COUNT) {
+                incrementWaterCount(context)
+            }
+        }
+    }
 
     /*TODO: 002 -
        - Criar uma função privada chamada incrementWaterCount para incrementar o contador de copo de águas

@@ -8,7 +8,7 @@ import android.preference.PreferenceManager
 
 class PreferencesUtils {
     companion object {
-        const val KEY_WATER_COUNT = "water-count"
+        const val KEY_WATER_COUNT = "WATER_COUNT"
         private const val DEFAULT_COUNT = 0
 
         @Synchronized
